@@ -1,7 +1,22 @@
 {{page-title "Unigen"}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
+<div class="center blue">
+<div style="font-size: 50px">Unigen</div>
+<LinkTo @route="manualeditor" >Manual Editor</LinkTo> |
+<LinkTo @route="base64gen" >Base64 Generator</LinkTo> | 
+<LinkTo @route="support" >Support</LinkTo>
+</div>
+<style>
+    .ember-application{
+        height: 100%;
+        width: 100%;
+        background-color: lightskyblue;
+    }
+    .center{
+        text-align: center;
+    }
+    .blue{
+        color: rgb(36, 33, 141);
+    }
+</style>
 {{outlet}}
