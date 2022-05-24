@@ -16,9 +16,9 @@ module('Integration | Component | supportitem', function (hooks) {
 
     // Template block usage:
     await render(hbs`
-      <Supportitem>
+      <SupportItem>
         template block text
-      </Supportitem>
+      </SupportItem>
     `);
 
     assert.dom(this.element).hasText('template block text');
