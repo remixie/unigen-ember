@@ -1,22 +1,64 @@
 {{page-title "Unigen"}}
 
-<div class="center blue">
-<div style="font-size: 50px">Unigen</div>
-<LinkTo @route="manualeditor" >Manual Editor</LinkTo> |
-<LinkTo @route="base64gen" >Base64 Generator</LinkTo> | 
-<LinkTo @route="support" >Support</LinkTo>
+<div class="center text-light">
+    <div class="fw-bold pt-3 fs-1">Unigen - Ember Example</div>
+    <span class="text-dark p-2 w-auto">
+    <LinkTo class="rounded-pill fs-5 py-1 px-3" @route="manualeditor">Manual Editor</LinkTo>
+    <LinkTo class=" rounded-pill fs-5 py-1 px-3" @route="base64gen">Base64 Generator</LinkTo>
+    <LinkTo class=" rounded-pill fs-5 py-1 px-3" @route="support">Support</LinkTo>
+    </span>
 </div>
 <style>
-    .ember-application{
+    html,
+    body,
+    .ember-application {
         height: 100%;
         width: 100%;
-        background-color: lightskyblue;
     }
-    .center{
+    a{
+        color: #16637d;
+        text-decoration: underline;
+
+    }
+
+ul {
+    list-style: outside none none;
+    padding-left: 10px;
+}
+    a:hover{
+        background-color: #16637d81;
+        color: white;
+        text-decoration: none;
+    }
+
+    .active{
+        background-color: #16637d;
+        color: white;
+        text-decoration: none;
+    }
+
+    .active:hover{
+        background-color: #16637d;
+        color: white;
+    }
+
+    .ember-application {
+        background-image: url('/background.jpeg');
+        backdrop-filter: invert(100%);
+    }
+
+    .center {
         text-align: center;
     }
-    .blue{
-        color: rgb(36, 33, 141);
+
+    .border-teal{
+        border: 10px #16637d solid;
     }
 </style>
-{{outlet}}
+<div style=" text-start container">
+    <div class="row justify-content-md-center">
+        <div class="col-6 bg-light text-dark p-4 mt-3 rounded-3 border-teal" style="--bs-bg-opacity: .75;">
+            {{outlet}}
+        </div>
+    </div>
+</div>

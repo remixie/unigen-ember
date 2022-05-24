@@ -1,0 +1,13 @@
+    {{#each this.supportlist as |list|}}    
+      <p class="fs-4">{{list.heading_title}}</p>
+      <div>
+   <ul> 
+{{#each list.links as |links|}}   
+<li ><a class="rounded-pill px-3" href={{links.url}}>
+    {{links.title}}
+    </a>
+</li>
+ {{/each}}
+  </ul>
+    </div>
+ {{/each}}
