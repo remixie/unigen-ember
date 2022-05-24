@@ -1,6 +1,17 @@
-{{page-title "Manualeditor"}}
-<div style="text-align: center">
-<h2>Manual Editor</h2>
-
-</div>
+{{page-title 'Manualeditor'}}
+<style>
+  .modal-lg{
+    width: 100%;
+  }
+</style>
+<h2 class='fw-bold fs-c text-light'>Manual Editor</h2>
+<EditorItems/>
+<button
+  type='button'
+  class='btn btn-secondary border-2 shadow-lg'
+  data-bs-toggle='modal'
+  data-bs-target='#manualedit'
+>
+  Open Editor
+</button>
 {{outlet}}
