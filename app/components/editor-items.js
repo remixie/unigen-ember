@@ -15,7 +15,7 @@ export default class EditorItemsComponent extends Component {
     this.test_case_list = [
       ...this.test_case_list,
       {
-        id: this.test_case_list[this.test_case_list.length-1].id + 1,
+        id: this.test_case_list[this.test_case_list.length - 1].id + 1,
         requirements,
         test_case,
       },
@@ -23,9 +23,9 @@ export default class EditorItemsComponent extends Component {
   }
 
   @action
-  deletecase(id){
-      this.test_case_list = this.test_case_list.filter(function(item) {
-        return item.id !== id
+  deletecase(id) {
+    this.test_case_list = this.test_case_list.filter(function (item) {
+      return item.id !== id;
     });
   }
 }
